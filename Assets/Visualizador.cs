@@ -75,7 +75,7 @@ public class Visualizador : MonoBehaviour
             puntos.Add(punto);
             clasesReales.Add(clase);
         }
-        Debug.Log($"✅ Puntos cargados: {puntos.Count}");
+        Debug.Log($"✓ Puntos cargados: {puntos.Count}");
     }
 
     void CargarModelo()
@@ -85,11 +85,11 @@ public class Visualizador : MonoBehaviour
         if (red.CargarDesdeJSON(path))
         {
             numClases = red.outputSize;
-            Debug.Log("✅ Modelo cargado correctamente");
+            Debug.Log("✓ Modelo cargado correctamente");
         }
         else
         {
-            Debug.LogError("❌ Error cargando modelo");
+            Debug.LogError("✕ Error cargando modelo");
             red = null;
         }
     }
@@ -98,7 +98,7 @@ public class Visualizador : MonoBehaviour
     {
         if (red == null || !red.cargado)
         {
-            Debug.LogError("❌ La red no está cargada");
+            Debug.LogError("✕ La red no está cargada");
             return;
         }
 
