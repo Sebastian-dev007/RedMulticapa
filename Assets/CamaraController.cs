@@ -23,7 +23,6 @@ public class CamaraController : MonoBehaviour
         var mouse = Mouse.current;
         if (mouse == null) return;
 
-        // ✅ ORBITAR — clic derecho + arrastrar
         if (mouse.rightButton.isPressed)
         {
             Vector2 delta = mouse.delta.ReadValue();
@@ -32,12 +31,10 @@ public class CamaraController : MonoBehaviour
             anguloX = Mathf.Clamp(anguloX, -80f, 80f);
         }
 
-        // ✅ ZOOM — rueda del ratón
         float scroll = mouse.scroll.ReadValue().y;
         distancia -= scroll * sensibilidadZoom * 0.01f;
         distancia = Mathf.Clamp(distancia, distanciaMin, distanciaMax);
 
-        // ✅ MOVER OBJETIVO — clic medio + arrastrar
         if (mouse.middleButton.isPressed)
         {
             Vector2 delta = mouse.delta.ReadValue();

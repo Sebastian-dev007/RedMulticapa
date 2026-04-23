@@ -48,16 +48,13 @@ public class DecisionBoundaryNN : MonoBehaviour
 
         outputSize = data["output_size"].Value<int>();
 
-        // ✅ Leer capas_ocultas — compatible con formato nuevo y viejo
         int[] capasArr;
         if (data["capas_ocultas"] != null)
         {
-            // Formato nuevo: lista directa
             capasArr = data["capas_ocultas"].ToObject<int[]>();
         }
         else
         {
-            // Formato viejo: leer hidden_size, hidden_size2, hidden_size3
             var lista = new List<int>();
             string[] claves = { "hidden_size","hidden_size2","hidden_size3",
                             "hidden_size4","hidden_size5","hidden_size6" };

@@ -51,7 +51,6 @@
   <ItemGroup>
     <Compile Include="Assets\RedNeuronalUnity.cs" />
     <Compile Include="Assets\Visualizador.cs" />
-    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\CamaraController.cs" />
     <Compile Include="Assets\ReproductorHistorial.cs" />
     <Compile Include="Assets\DecisionBoundaryNN.cs" />

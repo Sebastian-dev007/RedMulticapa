@@ -100,13 +100,12 @@ public class ReproductorHistorial : MonoBehaviour
 
         Debug.Log($"Historial cargado: {totalEpocas} épocas, {puntos.Count} puntos");
 
-        // ✅ Crear ejes si no existen
+
         CrearEjesIfNeeded();
 
         // Mostrar época 0
         AplicarEpoca(0);
 
-        // ✅ Recargar frontera
         DecisionBoundaryNN frontera = FindAnyObjectByType<DecisionBoundaryNN>();
         if (frontera != null) frontera.Recargar();
     }
