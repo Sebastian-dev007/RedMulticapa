@@ -39,7 +39,7 @@ public class DecisionBoundaryNN : MonoBehaviour
             return false;
         }
 
-        // ✅ Verificar campo obligatorio
+
         if (data["output_size"] == null)
         {
             Debug.LogError("modelo.json no tiene 'output_size'. Reentrena el modelo.");
